@@ -1,0 +1,15 @@
+pipelines:
+  custom: # Pipelines that can only be triggered manually
+    sonar:
+      - step:
+          script:
+            - echo "Manual triggers for Sonar are awesome!"
+    deployment-to-prod:
+      - step:
+          script:
+            - echo "Manual triggers for deployments are awesome!"
+  branches:  # Pipelines that run automatically on a commit to a branch can also be triggered manually
+    staging:
+      - step:
+          script:
+            - echo "Automated pipelines are cool too."

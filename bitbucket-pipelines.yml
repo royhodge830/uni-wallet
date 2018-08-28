@@ -13,3 +13,5 @@ pipelines:
       - step:
           script:
             - echo "Automated pipelines are cool too."
+
+trigger: manual

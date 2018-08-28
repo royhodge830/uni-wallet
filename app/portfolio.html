@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+<style>
+   .graph {
+     background:#333;
+     width: 100px;
+     height: 100px;
+    }
+ </style>
+</head>
+<body>
+<h1>Example Donut Chart</h1>
+<div id="graph"></div>
+<pre id="code" class="prettyprint linenums">
+  <script>
+Morris.Donut({
+ element: 'graph',
+ data: [
+   {value: 70, label: 'BTC'},
+   {value: 15, label: 'ETH'},
+   {value: 10, label: 'ERC20-TOKENS'},
+   {value: 5, label: 'UNIBITS'}
+ ],
+ backgroundColor: '#ccc',
+ labelColor: '#060',
+ colors: [
+   '#ffcc00',
+   '#666666',
+   '#67C69D',
+   '#5476ce'
+ ],
+ formatter: function (x) { return x + "%"}
+});
+</script>
+
+</pre>
+
+</body>
+<!--
+<div id="myfirstchart" style="height: 250px;" style="border:none;"></div>
+<script>
+new Morris.Line({
+  // ID of the element in which to draw the chart.
+  element: 'myfirstchart',
+  // Chart data records - each entry in this array corresponds to a point on
+  // the chart.
+  data: [
+    { year: '2017', value: 20 },
+    { year: '2018', value: 05 },
+    { year: '2019', value: 50 },
+    { year: '2020', value: 55 },
+    { year: '2021', value: 98 }
+  ],
+  // The name of the data record attribute that contains x-values.
+  xkey: 'year',
+  // A list of names of data record attributes that contain y-values.
+  ykeys: ['value'],
+  // Labels for the ykeys - will be displayed when you hover over the
+  // chart.
+  labels: ['Value']
+});
+</script>
+<h1>Value Goals</h1>
+<div id="graph"></div>
+<pre id="code" class="prettyprint linenums">
+  <script>
+var decimal_data = [];
+for (var x = 0; x <= 360; x += 10) {
+  decimal_data.push({
+    x: x,
+    y: Math.sin(Math.PI * x / 180).toFixed(4)
+  });
+}
+window.m = Morris.Line({
+  element: 'graph',
+  data: decimal_data,
+  xkey: 'x',
+  ykeys: ['y'],
+  labels: ['sin(x)'],
+  parseTime: false,
+  goals: [-1, 0, 1]
+});
+</script>
+</pre>
+<iframe src="./portfolio.html">
+</iframe>
+<iframe src="./portfolio.html" width="1050" height="550"></iframe>
+-->

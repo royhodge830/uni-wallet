@@ -1,0 +1,45 @@
+<html>
+<body>
+
+<style>
+    button,
+    label {
+        display: inline-block;
+    }
+</style>
+
+<h1>simple form test</h1>
+<p color="white">Commit new characters into the input field below to change the saved data:<br></p>
+<form>
+    <label><input type="text" value="" name="host_address" /></label>
+    <button type="button">Change</button>
+</form>
+
+
+<p>The current host address is saved as...</p>
+
+<code>
+
+</code>
+
+<script src="./assets/plugins/form.js"></script>
+
+<script>
+    var formEl = document.getElementsByTagName('form')[0];
+    var nameInput = formEl.getElementsByTagName('input')[0];
+    var code = document.getElementsByTagName('code')[0];
+    var model = {host_address: '127.0.0.1'};
+    var form = new Form({
+        el: formEl,
+        data: model,
+        onChange: function () {
+            code.textContent = JSON.stringify(model);
+        }
+    });
+    // set up the form, prep the DOM, and inject preset value from model
+    form.setup();
+    code.textContent = JSON.stringify(model);
+</script>
+
+</body>
+</html>

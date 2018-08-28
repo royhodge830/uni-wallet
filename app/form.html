@@ -1,0 +1,102 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connection Settings Setup</title>
+  <!-- Core CSS - Include with every page -->
+  <link href="./assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+  <link href="./assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link href="./assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
+  <link href="./assets/css/introjs.css" rel="stylesheet" />
+  <link href="./assets/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/w3-new.css">
+  <link href="./assets/css/main-style.css" rel="stylesheet" />
+  <link href='https://fonts.googleapis.com/css?family=Dosis:400,500,700,800,600,300,200' rel='stylesheet' type='text/css'>
+  <link rel="icon"
+        type="image/ico"
+        href="./assets/img/logo.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <!-- Core Scripts - Include with every page -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./assets/plugins/jquery-1.10.2.js"></script>
+  <script src="./assets/plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="./assets/plugins/connection.js"></script>
+  <script src="./assets/plugins/client.js"></script>
+  <script src="./assets/plugins/commands.js"></script>
+  <script src="./assets/plugins/rpccall.js"></script>
+  <script src="./assets/plugins/index.js"></script>
+  <script src="./assets/plugins/intro.min.js"></script>
+</head>
+<body>
+
+<style>
+    button,
+    label {
+        display: inline-block;
+    }
+</style>
+<form style="background-color:rgba(0, 0, 0, 0.5);">
+<font style="color: #fff">Host Address:</font>    <label><input type="text" value="127.0.0.1" name="host_addy" /></label>
+    <button type="button">Change</button>
+    <br>
+RPC Port:    <label><input style="background-color:#333;" type="number" value="15590" name="rpc_port" /></label>
+    <input type="button" onclick="alert('settings.get(connectionSettings.rpc_port)');" value="Alert Port Being Used!">
+    <br>
+RPC Username:    <label><input style="background-color:#333;"type="text" value="multichainrpc" name="rpc_user" /></label>
+    <button type="button">Change</button>
+    <br>
+RPC Password:    <label><input style="background-color:#333;" type="password" value="your-password" name="rpc_pass" /></label>
+    <button type="button">Change</button>
+</form>
+
+<!-- JS notes on clonig a variable ;)
+ let person1 = 'Michael';
+let person2 = person1;
+person1 = 'John';
+
+console.log(person1); // John
+console.log(person2); // Michael
+-->
+<p style="color: #fff">The current config is being saved as...</p>
+
+<code>
+
+</code>
+
+<script src="./assets/plugins/form.js"></script>
+
+<script>
+
+    var formEl = document.getElementsByTagName('form')[0];
+    var nameInput = formEl.getElementsByTagName('input')[0];
+    var code = document.getElementsByTagName('code')[0];
+
+
+    var model = {
+      host_addy: '127.0.0.1',
+      rpc_port: '1024',
+      rpc_user: 'multichainrpc',
+      rpc_pass: 'xxxx'
+    };
+
+let connectionSettings = model;
+
+
+    var form = new Form({
+        el: formEl,
+        data: model,
+        onChange: function () {
+            code.textContent = JSON.stringify(model);
+        }
+    });
+
+
+    // set up the form, prep the DOM, and inject set values from connectionSettingsModal
+    form.setup();
+    code.textContent = JSON.stringify(model);
+
+
+</script>
+
+</body>
+</html>

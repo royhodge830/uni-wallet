@@ -1,0 +1,8 @@
+{
+	"connection": {
+		"port": "15590",
+		"host": "127.0.0.1",
+    "user": "multichainrpc",
+    "pass": "Bx5mBiFuRcdSgLQgExfzkrg2o2qAPJDti7UXLwVBKWXM"
+	}
+}

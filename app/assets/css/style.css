@@ -1,0 +1,606 @@
+/* Global Styles */
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+	border-radius: 15px 15px 0px 0px;
+}
+
+.iframe {
+  border: none;
+  overflow:hidden;
+}
+
+
+span {
+  color: #fff;
+}
+
+label {
+  color: #555;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.collapsible2 {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+	border-radius:0px;
+}
+
+.active, .collapsible2:hover {
+    background-color: #555;
+}
+.collapsible3 {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+	border-radius: 0px -0px 15px 15px ;
+}
+
+.active, .collapsible3:hover {
+    background-color: #555;
+}
+
+.buttonMod {
+    background-color: #5476ce; /* Green */
+    border: none;
+    color: #333;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.buttonMod2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #555;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.content {
+    padding: 0 12px;
+    display: none;
+    overflow: hidden;
+    background-color: #999999;
+    word-wrap: break-word;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
+}
+
+/* ------------------------------- */
+ body {
+    background-color: #333;
+	  color:#fff;
+    font-size: 18px;
+}
+
+.jumbotron {
+  background-color: #333;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  font-size: 18px;
+}
+
+/* Wrappers */
+/* ------------------------------- */
+ #wrapper {
+    width: 100%;
+    #margin-top: 55px!important;
+    #background-color:#000;
+}
+
+#page-wrapper {
+    padding: 0 15px;
+    min-height: 568px;
+  	#background-color:#333;
+	 }
+
+
+.navbar-static-side ul li {
+    border-bottom:1px solid #fff !important;
+    color: white;
+}
+
+/* Navigation */
+/* ------------------------------- */
+/* Top Right Navigation Dropdown Styles */
+
+ .navbar-top-links li {
+    display: inline-block;
+}
+
+.navbar-top-links li:last-child {
+    margin-right: 15px;
+}
+
+.navbar-top-links li a {
+    padding: 20px;
+    min-height: 50px;
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.navbar-top-links .dropdown-menu li {
+    display: block;
+}
+
+.navbar-top-links .dropdown-menu li:last-child {
+    margin-right: 0;
+}
+
+.navbar-top-links .dropdown-menu li a {
+    padding: 3px 20px;
+    min-height: 0;
+    color: #666;
+}
+
+.navbar-top-links .dropdown-menu li a div {
+    white-space: normal;
+    color: #666;
+}
+
+.navbar-top-links .dropdown-messages,
+.navbar-top-links .dropdown-tasks,
+.navbar-top-links .dropdown-alerts {
+    width: 310px;
+    min-width: 0;
+}
+
+.navbar-top-links .dropdown-messages {
+    margin-left: 5px;
+}
+
+.navbar-top-links .dropdown-tasks {
+    margin-left: -59px;
+}
+
+.navbar-top-links .dropdown-alerts {
+    margin-left: -123px;
+}
+
+.navbar-top-links .dropdown-user {
+    right: 0;
+    left: auto;
+}
+
+/* Sidebar Menu Styles */
+
+ .sidebar-search {
+    padding: 15px;
+}
+
+.arrow {
+    float: right;
+}
+
+.fa.arrow:before {
+    content: "\f104";
+}
+
+.active > a > .fa.arrow:before {
+    content: "\f107";
+}
+
+.nav-second-level li,
+.nav-third-level li {
+    border-bottom: none !important;
+}
+
+.nav-second-level li a {
+    padding-left: 37px;
+    color: #666;
+}
+
+.nav-third-level li a {
+    padding-left: 52px;
+    color: #666;
+}
+
+@media(min-width:768px) {
+    .navbar-static-side {
+        z-index: 1;
+        position: absolute;
+        width: 250px;
+    }
+
+    .navbar-top-links .dropdown-messages,
+    .navbar-top-links .dropdown-tasks,
+    .navbar-top-links .dropdown-alerts {
+        margin-left: auto;
+    }
+}
+
+/* Buttons */
+/* ------------------------------- */
+ .btn-outline {
+    color: inherit;
+    background-color: transparent;
+    transition: all .5s;
+}
+
+.btn-primary.btn-outline {
+    color: #333333;
+}
+
+.btn-success.btn-outline {
+    color: #333333;
+}
+
+.btn-info.btn-outline {
+    color: #333333;
+}
+
+.btn-warning.btn-outline {
+    color: #333333;
+}
+
+.btn-danger.btn-outline {
+    color: #333333;
+}
+
+.btn-primary.btn-outline:hover,
+.btn-success.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+    color: #333333;
+}
+.buttonME {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-family: 'Dosis';
+  cursor: auto;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #555;
+}
+
+.buttonME:hover {
+  background-color: #666;
+}
+.centerBOX {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    text-align: center;
+}
+.buttonME:active {
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px #999;
+  color: #999;
+  transform: translateY(4px);
+}
+/* Pages */
+/* ------------------------------- */
+.custom-select {
+  position: relative;
+  font-family: Dosis;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  background-color: DodgerBlue;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+::placeholder {
+    color: black;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #000;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #000;
+}
+.panelPimp a {
+  box-shadow: 5px 10px #000:
+  word-wrap: break-word;
+  padding: 10px;
+}
+
+.panel .slidedown .glyphicon,
+.chat .glyphicon {
+    margin-right: 5px;
+    box-shadow: 5px 10px #888888:
+    word-wrap: break-word;
+
+}
+
+.no-overflow{
+	overflow-y:none;
+}
+
+
+.panel-body {
+    height: 150px;
+    font-size: 18px;
+    overflow-y: none;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
+    justify-content: center;
+    text-emphasis-style: filled;
+
+}
+
+.panel-body-2 {
+    height: 150px;
+    font-size: 18px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-align-content: center;
+    align-content: center;
+}
+
+.panel-body-no-overflow{
+	height: 150px;
+    font-size: 18px;
+    overflow-y: none;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
+}
+
+.third {
+  border-color: $blue;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #fff inset, 0 0 0 0 #fff;
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 4px $blue;
+  }
+}
+
+
+/* Circle Buttons */
+
+ .btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.428571429;
+}
+
+.btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-size: 18px;
+    line-height: 1.33;
+}
+
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+@font-face {
+    font-family: 'DosisBold';
+    src: url('../fonts/dosis-bold.eot');
+    src: url('../fonts/dosis-bold.eot') format('embedded-opentype'),
+         url('../fonts/dosis-bold.woff2') format('woff2'),
+         url('../fonts/dosis-bold.woff') format('woff'),
+         url('../fonts/dosis-bold.ttf') format('truetype'),
+         url('../fonts/dosis-bold.svg#DosisBold') format('svg');
+  }
+
+.show-grid {
+    margin: 15px 0;
+}
+
+.center {
+	margin:auto auto;
+	text-align:center;
+	float:center;
+  font-size: 18px;
+}
+
+.title {
+  font-family: DosisBold;
+	font-size:28px;
+  font-weight: 100;
+	color:#fff;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.bg666{
+	background-color:#666;
+}
+
+.panel-body ul{
+	width:100%;
+	padding:0;
+	margin:0;
+  align-content:center;
+  justify-content: center;
+}
+.panel-body li{
+	list-style:none;
+	width:100%;
+	padding:8px;
+	margin:0;
+}
+
+.panel-body-no-overflow ul{
+	width:100%;
+	padding:0;
+	margin:0;
+  justify-content: center;
+}
+.panel-body-no-overflow li{
+	list-style:none;
+	width:100%;
+	padding:8px;
+	margin:0;
+}
+
+.dark{
+	background-color:rgba(0,5,5,.5);
+	color:#fff;
+}
+
+.light{
+	background-color:rgba(240,240,240,.7);
+}
+
+.lego{
+	background: linear-gradient(110deg, #fdcd3b 30%, #ffa00e 60%, #f60000);
+}
+
+.galactic{
+	background:url('./galacticbut.jpg');
+}
+
+.whiteOpacity5{
+	background:rgba(255,255,255,.5);
+}
+
+.grayOpacity5{
+	background:rgba(245,245,245,.5);
+}
+
+.o-panel-heading{
+	padding: 10px 15px;
+	border-bottom: 1px solid transparent;
+    border-bottom-color: transparent;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+
+}
+
+.o-panel-footer{
+	padding: 10px 15px;
+	border-top: 1px solid #ddd;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+
+}
